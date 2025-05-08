@@ -1,0 +1,174 @@
+body {
+  overflow-x: hidden;
+}
+ul > li > a {
+  font-weight: 600;
+  color: aliceblue;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth; /* Tạo hiệu ứng cuộn mượt */
+}
+
+.header-nav {
+  z-index: 999;
+}
+/* Đảm bảo màu sắc liên kết bình thường */
+.nav-link {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+/* Đổi màu khi cuộn đến phần tử tương ứng */
+.text-danger {
+  color: #dc3545 !important;
+}
+
+/* Đảm bảo không có nhấp nháy khi cuộn đến */
+.nav-link.active {
+  color: #dc3545 !important;
+}
+
+.giang-text {
+  color: #ff0000;
+  text-align: center;
+  -webkit-text-stroke: 2px #ff0000;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+}
+
+ul > li > a {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px 0 0px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+ul > li > a:hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ff4040, #ff9999);
+  filter: blur(2px);
+  z-index: -1;
+}
+
+ul > li > a:hover {
+  border-radius: 50%;
+  width: fit-content;
+  height: fit-content;
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.outlined-text {
+  font-size: 48px; /* chỉnh cỡ chữ phù hợp */
+  font-weight: bold;
+  color: transparent; /* không tô màu bên trong */
+  -webkit-text-stroke: 1.5px white; /* viền trắng */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.typed-text {
+  font-weight: 900;
+  color: #dc3545;
+  font-size: 40px;
+  white-space: nowrap;
+}
+
+.cursor {
+  font-weight: bold;
+  color: #dc3545;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.content-main {
+  padding: 20px 0 200px 0;
+}
+.My-Service-text > div > p > span:nth-child(2) {
+  color: aliceblue;
+  font-size: 4em;
+}
+#typed-text {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 4em;
+  font-weight: 550;
+  opacity: 0;
+  /* white-space: nowrap; Không bị ngắt dòng giữa chừng */
+  transition: opacity 0.5s ease-in-out;
+}
+.My-Service-text-1::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  margin-left: 150px;
+  margin-top: 10px;
+  background: #ffffff;
+}
+.service-card {
+  border: 3px solid #fff;
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeInUp 1s 6s linear forwards;
+}
+
+.service-title {
+  color: aliceblue;
+  font-size: 1.8em;
+  font-weight: 750;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.service-desc {
+  color: aliceblue;
+  opacity: 0.75;
+  max-width: 250px;
+  display: inline-block;
+  text-align: justify;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
