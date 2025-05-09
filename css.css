@@ -172,3 +172,399 @@ ul > li > a:hover {
     opacity: 1;
   }
 }
+
+/*avatar img*/
+.home-img .img-box {
+  position: relative;
+  width: 410px;
+  height: 410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Viền halo xoay */
+.home-img .img-box::before {
+  content: "";
+  position: absolute;
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  background: conic-gradient(transparent, transparent, #dc3545, #ffc107);
+  animation: rotate-img 2.5s linear infinite;
+  z-index: 0;
+  filter: blur(4px);
+}
+
+/* Ảnh chính */
+.home-img .img-box .img-item {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: #000;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.2s ease-in-out, pulsate 3s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home-img .img-box .img-item:hover {
+  transform: scale(1.07) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+}
+
+/* Ảnh bên trong */
+.home-img .img-box .img-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: lighten;
+  transition: transform 0.6s ease;
+}
+
+/* Hover ảnh */
+.home-img .img-box .img-item:hover img {
+  transform: scale(1.1) rotate(3deg);
+}
+
+/* Xoay vòng halo */
+@keyframes rotate-img {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Xuất hiện */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Tim đập nhẹ */
+@keyframes pulsate {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+/* hiện ứng vừng vào*/
+.bars-animation {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  display: flex;
+  /* z-index: 1; */
+}
+
+.bars-animation .bar {
+  width: 100%;
+  height: 100%;
+  background: #131313;
+  transform: translateY(-100%);
+  animation: show-bars 0.5s ease-in-out forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes show-bars {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: bg 5s forwards;
+}
+
+@keyframes bg {
+  100% {
+    background-color: #131313;
+  }
+}
+
+#skills {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.skills-container {
+  position: relative;
+  height: 600px;
+  perspective: 1000px;
+}
+
+.animated-skill {
+  position: absolute;
+  width: 280px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  opacity: 0;
+  transform: scale(0.8);
+  z-index: 1;
+}
+
+.animated-skill strong {
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Four Seasons Colors */
+.spring {
+  border: 3px solid #7ed957;
+  background: linear-gradient(
+    145deg,
+    rgba(126, 217, 87, 0.1),
+    rgba(126, 217, 87, 0.2)
+  );
+}
+.spring strong {
+  color: #7ed957;
+}
+
+.summer {
+  border: 3px solid #ff9933;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 153, 51, 0.1),
+    rgba(255, 153, 51, 0.2)
+  );
+}
+.summer strong {
+  color: #ff9933;
+}
+
+.autumn {
+  border: 3px solid #e15b5b;
+  background: linear-gradient(
+    145deg,
+    rgba(225, 91, 91, 0.1),
+    rgba(225, 91, 91, 0.2)
+  );
+}
+.autumn strong {
+  color: #e15b5b;
+}
+
+.winter {
+  border: 3px solid #00ffc3;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 255, 195, 0.1),
+    rgba(0, 255, 195, 0.2)
+  );
+}
+.winter strong {
+  color: #00ffc3;
+}
+
+/* Hover Effects */
+.animated-skill:hover {
+  transform: scale(1.05) translateZ(30px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  z-index: 10;
+}
+
+.spring:hover {
+  box-shadow: 0 0 30px rgba(126, 217, 87, 0.3);
+}
+
+.summer:hover {
+  box-shadow: 0 0 30px rgba(255, 153, 51, 0.3);
+}
+
+.autumn:hover {
+  box-shadow: 0 0 30px rgba(225, 91, 91, 0.3);
+}
+
+.winter:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 195, 0.3);
+}
+
+.season-label {
+  position: absolute;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  padding: 5px 12px;
+  border-radius: 20px;
+  top: -15px;
+  left: 20px;
+  font-weight: bold;
+}
+
+.spring .season-label {
+  background-color: rgba(126, 217, 87, 0.3);
+  color: #7ed957;
+}
+
+.summer .season-label {
+  background-color: rgba(255, 153, 51, 0.3);
+  color: #ff9933;
+}
+
+.autumn .season-label {
+  background-color: rgba(225, 91, 91, 0.3);
+  color: #e15b5b;
+}
+
+.winter .season-label {
+  background-color: rgba(0, 255, 195, 0.3);
+  color: #00ffc3;
+}
+
+/* Four seasons animation with leaf particles */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.6;
+  animation: float 15s linear infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-100px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(800px) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .skills-container {
+    height: auto;
+  }
+
+  .animated-skill {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
+  }
+
+  .animated-skill:hover {
+    transform: scale(1.03) !important;
+  }
+}
+
+/* banner word run time*/
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner {
+  background-color: #e15b5b;
+  color: white;
+  padding: 20px 0;
+  border-top: 8px solid #0f0a1e;
+  border-bottom: 8px solid #0f0a1e;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.outlined-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.solid-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin: 0 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.star {
+  font-size: 2rem;
+  margin: 0 20px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Making the banner responsive */
+@media (max-width: 768px) {
+  .outlined-text,
+  .solid-text {
+    font-size: 1.8rem;
+  }
+  .star {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .outlined-text,
+  .solid-text {
+    font-size: 1.2rem;
+  }
+  .star {
+    font-size: 1rem;
+  }
+}

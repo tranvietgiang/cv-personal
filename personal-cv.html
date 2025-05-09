@@ -9,21 +9,36 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Thêm trước thẻ </body> -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link rel="stylesheet" href="css.css" />
     <title>Document</title>
   </head>
+
+
   <body>
     <!-- Header Navigation Section -->
     <section
       class="header-nav position-fixed w-100"
       style="background-color: #1c1c1c"
     >
-      <nav class="navbar navbar-expand-lg container p-4">
+      <nav
+        style="max-width: 1450px; margin: 0 auto"
+        class="navbar navbar-expand-lg p-4"
+      >
         <h1
           style="font-size: 2em; margin: 0 150px 0 0"
           class="giang-text navbar-brand"
           href="#"
         >
+          <i class="fa-solid fa-code"></i>
           Tran Viet Giang
         </h1>
         <div
@@ -34,17 +49,17 @@
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
               <a class="text-danger nav-link" href="#home"
-                >Home <span class="sr-only">(current)</span></a
-              >
+                >Personal Information
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about-me">About Me</a>
+              <a class="nav-link" href="#skills">Skills</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#blog">Blog <span>icon</span></a>
+              <a class="nav-link" href="#PROJECT-EXPERIENCE">Project Experience</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
@@ -57,16 +72,22 @@
       </nav>
     </section>
 
+    <div class="bars-animation">
+      <div class="bar" style="--i: 6"></div>
+      <div class="bar" style="--i: 5"></div>
+      <div class="bar" style="--i: 4"></div>
+      <div class="bar" style="--i: 3"></div>
+      <div class="bar" style="--i: 2"></div>
+      <div class="bar" style="--i: 1"></div>
+    </div>
+
+    <div style="padding: 50px 0; background-color: #131313"></div>
     <!-- Home Section -->
-    <section
-      id="home"
-      class="content-main"
-      style="background-color: #131313; padding: 100px 0"
-    >
+    <section id="home" class="content-main" style="padding: 100px 0">
       <div class="container content-text">
         <div class="row">
           <div class="col-6 text-title">
-            <p class="outlined-text">HELLO I’M</p>
+            <p style="font-size: 2em" class="text-danger">HELLO I’M</p>
             <p class="outlined-text">Tran Viet Giang</p>
             <p style="font-size: 2em; color: aliceblue">
               I’m a <span id="typed" class="typed-text"></span
@@ -87,25 +108,53 @@
               can apply my programming skills to real projects, learn from
               experts, and develop myself in a professional working environment.
             </p>
+            <p style="color: aliceblue; font-size: 1em">
+              <i class="fa-solid fa-user"></i>
+              <span class="px-2">Nam</span>
+            </p>
+            <p style="color: aliceblue; font-size: 1em">
+              <i class="fa-solid fa-cake-candles"></i>
+              <span class="px-2">20/02/2005</span>
+            </p>
+
+            <p style="color: aliceblue; font-size: 1em">
+              📞 Phone: 0336 833 827
+            </p>
+            <p style="color: aliceblue; font-size: 1em">
+              📍 Address: Thủ Đức, HCM
+            </p>
+            <p style="color: aliceblue; font-size: 1em">
+              <span
+                ><i class="fab fa-github"></i>
+                <a class="text-white" href="https://github.com/tranvietgiang"
+                  >github.com/tranvietgiang</a
+                > </span
+              ><br />
+              <span
+                ><i class="fas fa-envelope"></i>
+                <span>tranvietgiang25@gmail.com</span>
+              </span>
+            </p>
           </div>
           <div class="col-6">
-            <div>
-              <img
-                style="object-fit: cover; width: 300px; height: 300px"
-                src="avatar_cv.png"
-                alt=""
-              />
+            <div class="home-img">
+              <div class="img-box">
+                <div class="img-item">
+                  <img class="hexagon-image" src="222.png" alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <div style="padding: 100px 0; background-color: #131313"></div>
 
     <!-- Services Section -->
     <section
       id="services"
       class="My-Service-text"
-      style="background-color: #131313; padding: 50px 0"
+      style="background-color: #131313"
     >
       <div class="container">
         <p>
@@ -129,91 +178,90 @@
       </div>
     </section>
 
-    <!-- About Me Section -->
-    <section id="about-me" style="background-color: #131313; padding: 50px 0">
+    <div style="padding: 100px 0; background-color: #131313"></div>
+
+    <!-- Skills Section -->
+    <section id="skills">
       <div class="container">
-        <h2 class="text-white">About Me</h2>
+        <h2 style="margin: 100px 0;" data-aos="zoom-in" data-aos-delay="300" class="outlined-text">
+          Skills
+        </h2>
+
+        <div class="skills-container">
+          <!-- Particles Container -->
+          <div class="particles-container" id="particles"></div>
+
+          <!-- Spring: Programming Languages -->
+          <div class="animated-skill spring" id="spring">
+            <div class="season-label">Spring</div>
+            <strong>Programming Languages:</strong><br />
+            <span style="opacity: 0.9">PHP, C#, JavaScript</span>
+          </div>
+
+          <!-- Summer: Frameworks -->
+          <div class="animated-skill summer" id="summer">
+            <div class="season-label">Summer</div>
+            <strong>Frameworks & Libraries:</strong><br />
+            <span style="opacity: 0.9">Laravel (PHP), WinForms (C#)</span>
+          </div>
+
+          <!-- Autumn: Web Development -->
+          <div class="animated-skill autumn" id="autumn">
+            <div class="season-label">Autumn</div>
+            <strong>Web Development:</strong><br />
+            <span style="opacity: 0.9"
+              >HTML, CSS, JavaScript, Bootstrap 5, AJAX</span
+            >
+          </div>
+
+          <!-- Winter: Databases & Other -->
+          <div class="animated-skill winter" id="winter">
+            <div class="season-label">Winter</div>
+            <strong>Databases:</strong><br />
+            <span style="opacity: 0.9">MySQL, SQL Server</span><br /><br />
+            <strong>Other Skills:</strong><br />
+            <span style="opacity: 0.9"
+              >OOP, MVC Architecture, Git & GitHub</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- banner word run time -->
+     <div class="banner-container">
+      <div class="banner">
+        <div class="scrolling-text">
+          <span class="outlined-text">DESIGNER</span>
+          <span class="star">✦</span>
+          <span class="solid-text">WEB DEVELOPER</span>
+          <span class="star">✦</span>
+          <span class="outlined-text">DESIGNER</span>
+          <span class="star">✦</span>
+          <span class="solid-text">WEB DEVELOPER</span>
+          <span class="star">✦</span>
+          <span class="outlined-text">DESIGNER</span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Blog Section -->
+    <section id="PROJECT-EXPERIENCE" style="background-color: #131313; padding: 150px 0">
+      <div class="container">
+        <h2 class="outlined-text">EDUCATION - PROJECT EXPERIENCE </h2>
         <p class="text-white" style="font-size: 1.2em; opacity: 0.7">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum.
+          <h4></h4>
+          <span><h5>Cao Đẳng Công Nghệ Thủ Đức</h5></span>
+          <span>Major: Công nghệ thông tin </span>
         </p>
       </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" style="background-color: #131313; padding: 50px 0">
-      <div class="container">
-        <h2 class="text-white">Blog</h2>
-        <p class="text-white" style="font-size: 1.2em; opacity: 0.7">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-          corporis velit ab aspernatur laborum unde quaerat voluptas quasi eaque
-          harum.
-        </p>
-      </div>
-    </section>
+
 
     <!-- Contact Section -->
     <section id="contact" style="background-color: #131313; padding: 50px 0">
@@ -272,7 +320,204 @@
         </p>
       </div>
     </section>
+
+
   </body>
 </html>
 
 <script src="js.js"></script>
+<link
+  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+  rel="stylesheet"
+/>
+
+
+<!-- GSAP CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: false,
+        mirror: true,
+      });
+
+      // Register GSAP ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Create particle effects representing seasons
+      function createParticles() {
+        const particlesContainer = document.getElementById("particles");
+        const colors = [
+          "#7ed957", // Spring
+          "#ff9933", // Summer
+          "#e15b5b", // Autumn
+          "#00ffc3", // Winter
+        ];
+
+        // Create 40 particles
+        for (let i = 0; i < 40; i++) {
+          const particle = document.createElement("div");
+          particle.className = "particle";
+
+          // Random color from seasons
+          const colorIndex = Math.floor(Math.random() * colors.length);
+          particle.style.backgroundColor = colors[colorIndex];
+
+          // Random position and animation delay
+          particle.style.left = `${Math.random() * 100}%`;
+          particle.style.animationDelay = `${Math.random() * 15}s`;
+          particle.style.animationDuration = `${10 + Math.random() * 20}s`;
+
+          // Random size
+          const size = 5 + Math.random() * 10;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          particle.style.borderRadius = Math.random() > 0.5 ? "50%" : "0";
+
+          particlesContainer.appendChild(particle);
+        }
+      }
+
+      // Function to handle animation based on scroll position
+      function setupSkillsAnimation() {
+        const springSkill = document.getElementById("spring");
+        const summerSkill = document.getElementById("summer");
+        const autumnSkill = document.getElementById("autumn");
+        const winterSkill = document.getElementById("winter");
+
+        // Initial positions (off-screen)
+        gsap.set(springSkill, { x: "-150%", y: "-50%", opacity: 0 });
+        gsap.set(summerSkill, { x: "150%", y: "-50%", opacity: 0 });
+        gsap.set(autumnSkill, { x: "-150%", y: "50%", opacity: 0 });
+        gsap.set(winterSkill, { x: "150%", y: "50%", opacity: 0 });
+
+        // Create timeline that activates on scroll
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#skills",
+            start: "top center",
+            end: "center center",
+            scrub: 1,
+          },
+        });
+
+        // Animate to center
+        timeline.to(
+          springSkill,
+          {
+            x: "-30%",
+            y: "-30%",
+            opacity: 1,
+            ease: "power2.out",
+          },
+          0
+        );
+
+        timeline.to(
+          summerSkill,
+          {
+            x: "30%",
+            y: "-30%",
+            opacity: 1,
+            ease: "power2.out",
+          },
+          0
+        );
+
+        timeline.to(
+          autumnSkill,
+          {
+            x: "-30%",
+            y: "30%",
+            opacity: 1,
+            ease: "power2.out",
+          },
+          0
+        );
+
+        timeline.to(
+          winterSkill,
+          {
+            x: "30%",
+            y: "30%",
+            opacity: 1,
+            ease: "power2.out",
+          },
+          0
+        );
+
+        // Create a hover effect with GSAP
+        const skills = document.querySelectorAll(".animated-skill");
+        skills.forEach((skill) => {
+          skill.addEventListener("mouseenter", () => {
+            gsap.to(skill, {
+              scale: 1.05,
+              z: 30,
+              duration: 0.4,
+              ease: "power2.out",
+            });
+
+            // Make other skills slightly transparent
+            skills.forEach((otherSkill) => {
+              if (otherSkill !== skill) {
+                gsap.to(otherSkill, {
+                  opacity: 0.7,
+                  duration: 0.4,
+                });
+              }
+            });
+          });
+
+          skill.addEventListener("mouseleave", () => {
+            gsap.to(skill, {
+              scale: 1,
+              z: 0,
+              duration: 0.4,
+              ease: "power2.in",
+            });
+
+            // Restore opacity of other skills
+            skills.forEach((otherSkill) => {
+              gsap.to(otherSkill, {
+                opacity: 1,
+                duration: 0.4,
+              });
+            });
+          });
+        });
+      }
+
+      // Initialize
+      window.addEventListener("DOMContentLoaded", () => {
+        createParticles();
+        setupSkillsAnimation();
+      });
+
+      // For touch devices
+      if ("ontouchstart" in window) {
+        document.querySelectorAll(".animated-skill").forEach((skill) => {
+          skill.classList.add("touch-device");
+        });
+
+        // Add touch-specific styles
+        const style = document.createElement("style");
+        style.textContent = `
+                .touch-device {
+                    opacity: 1 !important;
+                }
+                @media (max-width: 991px) {
+                    .spring { top: 0 !important; }
+                    .summer { top: 0 !important; }
+                    .autumn { top: 0 !important; }
+                    .winter { top: 0 !important; }
+                }
+            `;
+        document.head.appendChild(style);
+      }
+    </script>
