@@ -3,28 +3,211 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Four Seasons Skills</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-    />
+    <title>Contact Form</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
       body {
-        background-color: #131313;
-        color: #ffffff;
-        font-family: "Arial", sans-serif;
-        overflow-x: hidden;
+        background-color: #111;
+        color: #fff;
+        padding: 20px;
       }
 
       .container {
+        display: flex;
         max-width: 1200px;
-        padding: 20px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      .left-section {
+        flex: 1;
+        padding-right: 40px;
+      }
+
+      .right-section {
+        flex: 1;
+      }
+
+      .heading {
+        font-size: 5rem;
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: 40px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .icon-circle {
+        width: 60px;
+        height: 60px;
+        background-color: #e15353;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+      }
+
+      .icon-circle svg {
+        fill: white;
+        width: 25px;
+        height: 25px;
+      }
+
+      .contact-details h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        letter-spacing: 1px;
+      }
+
+      .contact-details p {
+        color: #ccc;
+      }
+
+      .form-group {
+        margin-bottom: 30px;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+
+      .form-control {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #555;
+        padding: 10px 0;
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-bottom-color: #e15353;
+      }
+
+      textarea.form-control {
+        min-height: 100px;
+        resize: vertical;
+      }
+
+      .btn {
+        background-color: #e15353;
+        color: white;
+        border: none;
+        padding: 15px 35px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #c43a3a;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        background-color: #e15353;
+        border-radius: 50%;
+        margin: 30px auto;
       }
     </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="left-section">
+        <h1 class="heading">LET'S<br />GET<br />IN TOUCH</h1>
+
+        <div class="contact-item">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+          </div>
+          <div class="contact-details">
+            <h3>E-MAIL</h3>
+            <p>hello@domain.com</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"
+              />
+            </svg>
+          </div>
+          <div class="contact-details">
+            <h3>PHONE</h3>
+            <p>+123 445 566</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="icon-circle">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              />
+            </svg>
+          </div>
+          <div class="contact-details">
+            <h3>LOCATION</h3>
+            <p>123 Main Street New York</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <form>
+          <div class="form-group">
+            <label>Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Message</label>
+            <textarea
+              class="form-control"
+              placeholder="Enter your message"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn">SEND MESSAGE</button>
+        </form>
+
+        <div class="dot"></div>
+      </div>
+    </div>
+  </body>
 </html>
